@@ -1,0 +1,22 @@
+{
+  "name": "calculadorajs",
+  "version": "1.0.0",
+  "description": "Calculadora desenvolvida em reactjs para aplicar os conhecimentos adquiridos com base na documentação do https://reactjs.org  Esta é minha primeira aplicação desenvolvida em reactjs, sugestões, dicas e melhorias são totalmente bem vindas!  Abraço!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaovcc/calculadorajs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaovcc/calculadorajs/issues"
+  },
+  "homepage": "https://github.com/joaovcc/calculadorajs#readme",
+  "dependencies": {
+    "create-react-app": "^3.1.1"
+  }
+}
