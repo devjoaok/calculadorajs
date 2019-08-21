@@ -7,15 +7,59 @@ import * as serviceWorker from './serviceWorker';
 class App extends React.Component {
    constructor (props) {
       super(props);
+      this.state = {
+         a: 0,
+         b: 0,
+         o: null,
+         r: 0
+      }
    }
+
+   handleClick(i) {
+      const operation = i.target.innerHTML;
+      var value = operation * 1;
+
+      if (isNaN(value)) {
+         //; Selected a operation
+         switch (operation) {
+            case '+':
+               break;
+            case '-':
+               break;
+            case '*':
+               break;
+            case '/':
+               break;
+            case ',':
+               break;
+            case '+/-':
+               break;
+            case '<-':
+               break;
+            case 'c':
+               break;
+            case 'ce':
+               break;
+            case '=':
+               break;
+         }
+      } else { 
+         //; Selected a number
+      }
+   }
+
    render () {
       return (
       <div className="App">
          <div>
-            <Input />
+            <Input 
+               onKeyUp={(i) => console.log(i)}
+            />
          </div>
          <div className="padding-top">
-            <Board />
+            <Board 
+               onClick={(i) => this.handleClick(i)}
+            />
          </div>
       </div>
       )
@@ -24,9 +68,12 @@ class App extends React.Component {
 
 class Board extends React.Component {
    renderSquare(i) {
-      return (<Square value={i} />);
+      return (<Square 
+         value={i}
+         onClick={(i) => this.props.onClick(i)}
+      />);
    }
-   
+
    render() {
       return (
       <div>
@@ -68,17 +115,11 @@ class Board extends React.Component {
 class Input extends React.Component {
    constructor (props) {
       super(props);
-      this.state = {
-      a: 0,
-      b: 0,
-      o: '+',
-      r: 0
-      }
    }
 
    render () {
       return (
-      <input type="number" />
+         <input type="number" onKeyUp={this.props.onKeyUp}/>
       )
    };
 }

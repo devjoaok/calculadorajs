@@ -45,6 +45,7 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 34px;
+  cursor: pointer;
 }
 
 .square:focus {
@@ -66,4 +67,12 @@ ol, ul {
 
 .padding-top {
   padding-top: 5px;
+}
+
+.square:hover {
+  border: 3px solid #000;
+}
+
+.square:active {
+  border: 3px solid #f00;
 }
