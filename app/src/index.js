@@ -5,33 +5,31 @@ import * as serviceWorker from './serviceWorker';
 
 
 class App extends React.Component {
-    constructor (props) {
-        super(props);
-    }
-    render () {
+   constructor (props) {
+      super(props);
+   }
+   render () {
       return (
-        <div className="App">
-          <div>
-              <Input />
-          </div>
-          <div className="padding-top">
-              <Board />
-          </div>
-        </div>
+      <div className="App">
+         <div>
+            <Input />
+         </div>
+         <div className="padding-top">
+            <Board />
+         </div>
+      </div>
       )
-    }
-  }
-  //class Board extends React.Component {
-  
-class Board extends React.Component {
+   }
+}
 
-    renderSquare(i) {
-        return (<Square value={i} />);
-    }
-    
-    render() {
-        return (
-        <div>
+class Board extends React.Component {
+   renderSquare(i) {
+      return (<Square value={i} />);
+   }
+   
+   render() {
+      return (
+      <div>
             <div className="board-row">
             {this.renderSquare('ce')}
             {this.renderSquare('c')}
@@ -62,40 +60,40 @@ class Board extends React.Component {
             {this.renderSquare(',')}
             {this.renderSquare('=')}
             </div>
-        </div>
-        );
-    }
-    }
+      </div>
+      );
+   }
+   }
 
-  class Input extends React.Component {
-    constructor (props) {
+class Input extends React.Component {
+   constructor (props) {
       super(props);
       this.state = {
-        a: 0,
-        b: 0,
-        o: '+',
-        r: 0
+      a: 0,
+      b: 0,
+      o: '+',
+      r: 0
       }
-    }
-  
-    render () {
+   }
+
+   render () {
       return (
-        <input type="number" />
+      <input type="number" />
       )
-    };
-  }
-  
-  function Square (props) {
-    return (
+   };
+}
+
+function Square (props) {
+   return (
       <button className="square" onClick={props.onClick}>
-        {props.value}
+      {props.value}
       </button>
-    );
-  }
+   );
+}
 
 ReactDOM.render(
-    <App />, 
-    document.getElementById('root')
+      <App />, 
+   document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
