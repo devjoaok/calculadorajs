@@ -11,7 +11,8 @@ class App extends React.Component {
          a: 0,
          b: 0,
          o: null,
-         r: 0
+         r: 0,
+         aIsActive: true
       }
    }
 
@@ -45,6 +46,11 @@ class App extends React.Component {
          }
       } else { 
          //; Selected a number
+         if (this.state.aIsActive) {
+
+         } else {
+
+         }
       }
    }
 
